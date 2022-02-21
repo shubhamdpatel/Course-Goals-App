@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet, Modal } from 'react-native';
+import React, { useState } from "react";
+import { View, TextInput, Button, StyleSheet, Modal } from "react-native";
 
-const GoalInput = props => {
-  const [enteredGoal, setEnteredGoal] = useState('');
+const GoalInput = (props) => {
+  const [enteredGoal, setEnteredGoal] = useState("");
 
-  const goalInputHandler = enteredText => {
+  const goalInputHandler = (enteredText) => {
     setEnteredGoal(enteredText);
   };
 
   const addGoalHandler = () => {
     props.onAddGoal(enteredGoal);
-    setEnteredGoal('');
+    setEnteredGoal("");
   };
 
   return (
@@ -38,24 +38,24 @@ const GoalInput = props => {
 const styles = StyleSheet.create({
   inputContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center",
   },
   input: {
-    width: '80%',
-    borderColor: 'black',
+    width: "80%",
+    borderColor: "black",
     borderWidth: 1,
     padding: 10,
-    marginBottom: 10
+    marginBottom: 10,
   },
   buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '60%'
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "60%",
   },
   button: {
-    width: '40%'
-  }
+    width: "40%",
+  },
 });
 
 export default GoalInput;
